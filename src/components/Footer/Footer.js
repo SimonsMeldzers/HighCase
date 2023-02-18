@@ -16,7 +16,7 @@ import '../Footer/Footer.css'
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
-  const checkBoxLabel = <Typography sx={{width:'45%'}} variant='body2'>I hereby agree to the terms and conditions for digital communication in accordance with the <u>privacy policy*</u></Typography>
+  const checkBoxLabel = <Typography className='footer_checkbox_text' sx={{width:'45%'}} variant='body2'>I hereby agree to the terms and conditions for digital communication in accordance with the <u>privacy policy*</u></Typography>
   return (
       <Box
         component="footer"
@@ -29,8 +29,8 @@ export default function Footer() {
           flexGrow: 1
         }}
       >
-          <Grid container spacing={2} ml={3} >
-            <Grid item lg={8} md={8}>
+          <Grid container spacing={2}>
+            <Grid className='footer_form_container' item lg={8} md={8}>
               <Typography variant="h4" component='h1'>
                 Earn 10% off on your next order.
               </Typography>
@@ -51,12 +51,15 @@ export default function Footer() {
               </FormGroup>
             </Grid>
 
-            <Grid item lg={4} md={4} sx={{}}>
-              <Link style={{textDecoration:'none', color:'white'}}><Typography variant='h6' component='h2'> Products </Typography></Link>
-              <span style={{fontSize:'23px', margin:'0px 4px 0px 4px'}}>|</span>
-              <Link style={{textDecoration:'none', color:'white'}}><Typography variant='h6' component='h2'> About Us </Typography></Link>
-              <span style={{fontSize:'23px', margin:'0px 4px 0px 4px'}}>|</span>
-              <Link style={{textDecoration:'none', color:'white'}}><Typography variant='h6' component='h2'> Contacts </Typography></Link>
+            <Grid item lg={4} md={4} className='footer_right_container'>
+              <Grid item className='footer_link_container' sx={{display:'flex'}}>
+                <Link style={{textDecoration:'none', color:'white'}}><Typography variant='h6' component='h2'> Products </Typography></Link>
+                <span style={{fontSize:'23px', margin:'0px 4px 0px 4px'}}>|</span>
+                <Link style={{textDecoration:'none', color:'white'}}><Typography variant='h6' component='h2'> About Us </Typography></Link>
+                <span style={{fontSize:'23px', margin:'0px 4px 0px 4px'}}>|</span>
+                <Link style={{textDecoration:'none', color:'white'}}><Typography variant='h6' component='h2'> Contacts </Typography></Link>
+              </Grid>
+              <Typography variant='h2' component='h1' sx={{fontFamily:'Dancing Script'}}> High Case </Typography>
             </Grid>
           </Grid>
 
