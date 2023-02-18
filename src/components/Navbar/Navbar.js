@@ -20,6 +20,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
+import '../Navbar/Navbar.css'
 const pages = [
   {
     pageName: 'Products',
@@ -46,7 +47,7 @@ const Navbar = () => {
     };
   
     return (
-      <AppBar color='primary' position='static' sx={{opacity: 0.9}}>
+      <AppBar color='primary' position='static' className='appbar'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
 

@@ -20,6 +20,9 @@ const theme = createTheme({
     },
     info:{
       main: '#ffffff',
+    },
+    warning:{
+      main: '#FFD56F'
     }
   }
 })
