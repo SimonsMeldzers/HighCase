@@ -1,0 +1,31 @@
+@media (max-width: 1400px){
+    .paper_container{
+        width: 250px !important;
+    }
+}
+@media (max-width: 1192px){
+    .paper_container{
+        width: 200px !important;
+    }
+    #card_name{
+        font-size: 18px !important;
+    }
+}
+@media (max-width: 310px) {
+    .paper_container{
+        width: 180px !important;
+    }
+}
+@media (max-width: 294px){
+    .paper_container{
+        width: 150px !important;
+    }
+}
+
+.paper_container{
+    width: 300px;
+}
+
+#card_name, #card_category, #card_price{
+    margin-left: 10px;
+}

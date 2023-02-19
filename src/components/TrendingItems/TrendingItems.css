@@ -1,0 +1,9 @@
+@media (max-width: 330px) {
+    #trending_items_heading_grid{
+        padding-left: 5px !important
+    }
+}
+.trending_items_heading{
+    font-family: 'Dancing Script' !important;
+}
+
