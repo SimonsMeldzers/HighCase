@@ -1,17 +1,30 @@
 import React from 'react'
 
-import { Button, Container, Grid, Typography } from '@mui/material'
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Button, Container, Grid, IconButton, Typography } from '@mui/material'
+import {Swiper, SwiperSlide, useSwiper} from 'swiper/react';
 import { FreeMode } from 'swiper';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import 'swiper/css';
 import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import '../TrendingItems/TrendingItems.css'
 import TrendingItemsCard from './TrendingItemsCard/TrendingItemsCard';
 
+const SwiperButtonNext = () => {
+    const swiper = useSwiper();
+    return(
+        <IconButton sx={{height:'40px', backgroundColor:'white', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px;'}} onClick={() => swiper.slideNext()}>
+            <ArrowForwardIosRoundedIcon/>
+        </IconButton>
+    )
+
+}
+
 function TrendingItems() {
+    const swiper = useSwiper();
   return (
     <Grid container sx={{display: 'flex', flexDirection: 'column'}} pl={0} pr={3} mt={3}>
         <Grid item md={3} sm={5} xs={12} pl={10} id='trending_items_heading_grid' sx={{display: 'flex', flexDirection: 'column'}}>
@@ -26,6 +39,9 @@ function TrendingItems() {
                 grabCursor={true}
                 modules={[FreeMode]}
                 className='mySwiper'
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                  }}
                 breakpoints={{
                     0:{
                         slidesPerView: 1.6,
@@ -50,12 +66,10 @@ function TrendingItems() {
                     1280:{
                         slidesPerView: 4.3,
                         spaceBetween: 15,
-                    },
-                                       
+                    },        
                 }}
                 
             >  
-
             <SwiperSlide style={{marginRight:'100px'}}>
                 <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
             </SwiperSlide>
@@ -74,15 +88,14 @@ function TrendingItems() {
             <SwiperSlide style={{marginRight:'100px'}}>
                 <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
             </SwiperSlide>
-            
-
-
-            
-
+            <div className="swiper-button-next">
+                <SwiperButtonNext/>
+            </div>
             </Swiper>
         </Container>
+
     </Grid>
   )
 }
 
-export default TrendingItems
+export default TrendingItems;
