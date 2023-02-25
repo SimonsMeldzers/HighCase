@@ -1,2 +1,5 @@
-
+.navbar_title:hover{
+    color: rgba(255, 255, 255, 0.76) !important;
+    cursor: pointer;
+}
 

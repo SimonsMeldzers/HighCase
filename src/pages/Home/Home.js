@@ -6,6 +6,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import Banner from '../../components/Banner/Banner';
 import TrendingItems from '../../components/TrendingItems/TrendingItems';
+import ExploreCategories from '../../components/ExploreCategories/ExploreCategories';
+import InfoSection from '../../components/InfoSection/InfoSection';
 
 const Home = () => {
    
@@ -14,6 +16,8 @@ const Home = () => {
     <Navbar/>
     <Banner/>
     <TrendingItems/>
+    <ExploreCategories/>
+    <InfoSection/>
     <Footer/>
     </>
   )

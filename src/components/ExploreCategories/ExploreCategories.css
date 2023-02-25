@@ -1,0 +1,41 @@
+@media (max-width: 330px) {
+    #explore_categories_heading_grid{
+        padding-left: 5px !important
+    }
+}
+.explore_categories_heading{
+    font-family: 'Dancing Script' !important;
+}
+
+.explore_element_paper {
+    height: 350px;
+    background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MM2J3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1629923697000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 50px;
+    position: relative;
+    opacity: 0.999;
+  }
+  
+  .explore_element_paper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .explore_element_button {
+    height: 40px;
+    width: 70%;
+    background-color: rgb(255, 255, 255) !important;
+    border-width: 3px !important;
+    border-radius: 0px !important;
+  }

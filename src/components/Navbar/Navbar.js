@@ -92,7 +92,7 @@ const Navbar = () => {
               variant="h5"
               noWrap
               component="a"
-              href=""
+              className='navbar_title'
               sx={{
                 mr: 2,
                 display: { xs: 'flex', md: 'none' },
@@ -124,7 +124,7 @@ const Navbar = () => {
               variant="h6"
               noWrap
               component="a"
-              href="/"
+              className='navbar_title'
               sx={{
                 
                 display: { xs: 'none', md: 'flex' },

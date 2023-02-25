@@ -24,17 +24,21 @@ const SwiperButtonNext = () => {
 }
 
 function TrendingItems() {
-    const swiper = useSwiper();
+    const slides = new Array(8).fill().map((_, index) => (
+        <SwiperSlide key={index} style={{ marginRight: '100px' }}>
+          <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
+        </SwiperSlide>
+      ));
   return (
     <Grid container sx={{display: 'flex', flexDirection: 'column'}} pl={0} pr={3} mt={3}>
         <Grid item md={3} sm={5} xs={12} pl={10} id='trending_items_heading_grid' sx={{display: 'flex', flexDirection: 'column'}}>
             <Typography className='trending_items_heading' variant='h3' component='h1'> Trending Items </Typography>
-            <span style={{width:'90%', height:'3px', backgroundColor:'#939B62'}}></span>
+            <span style={{width:'82%', height:'3px', backgroundColor:'#939B62'}}></span>
         </Grid>
 
         <Container maxWidth='xl' className='trending_items_slider_container'>
             <Swiper
-                style={{padding:'5px 0px 5px 5px', marginTop:'20px'}}
+                style={{padding:'5px 0px 5px 5px', marginTop:'30px'}}
                 freeMode={true}
                 grabCursor={true}
                 modules={[FreeMode]}
@@ -69,28 +73,14 @@ function TrendingItems() {
                     },        
                 }}
                 
-            >  
-            <SwiperSlide style={{marginRight:'100px'}}>
-                <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
-            </SwiperSlide>
-            <SwiperSlide style={{marginRight:'100px'}}>
-                <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
-            </SwiperSlide>
-            <SwiperSlide style={{marginRight:'100px'}}>
-                <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
-            </SwiperSlide>
-            <SwiperSlide style={{marginRight:'100px'}}>
-                <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
-            </SwiperSlide>
-            <SwiperSlide style={{marginRight:'100px'}}>
-                <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
-            </SwiperSlide>
-            <SwiperSlide style={{marginRight:'100px'}}>
-                <TrendingItemsCard name='Dinosaur Couples cases' category='Pair cases' price='22.99€'/>
-            </SwiperSlide>
+            >
+  
+            {slides}
+
             <div className="swiper-button-next">
                 <SwiperButtonNext/>
             </div>
+
             </Swiper>
         </Container>
 

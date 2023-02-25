@@ -1,0 +1,10 @@
+@media (max-width:1400px){
+    #wide_text{
+        display:none;
+    }
+}
+@media (min-width:1401px){
+    #accordion_text{
+        display: none;
+    }
+}
