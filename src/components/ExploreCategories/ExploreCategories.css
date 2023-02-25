@@ -1,8 +1,16 @@
+@media (max-width: 600px) {
+    #explore_categories_heading_grid{
+        text-align: center;
+        padding-left: 0px !important;
+        align-items: center;
+    }
+}
 @media (max-width: 330px) {
     #explore_categories_heading_grid{
         padding-left: 5px !important
     }
 }
+
 .explore_categories_heading{
     font-family: 'Dancing Script' !important;
 }

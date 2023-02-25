@@ -1,3 +1,10 @@
+@media (max-width: 600px) {
+    #trending_items_heading_grid{
+        text-align: center;
+        padding-left: 0px !important;
+        align-items: center;
+    }
+}
 @media (max-width: 330px) {
     #trending_items_heading_grid{
         padding-left: 5px !important
