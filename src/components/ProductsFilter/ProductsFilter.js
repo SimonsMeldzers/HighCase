@@ -12,7 +12,7 @@ function ProductsFilter() {
                 Phone Cases
             </Typography>
             <Typography className='products_filter_text'>
-                Shop new and seasonal cases
+                Shop new and seasonal items
             </Typography>
         </div>
         <div className='products_filter_buttons_div'>

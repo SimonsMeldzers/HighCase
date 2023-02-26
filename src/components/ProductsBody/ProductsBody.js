@@ -12,9 +12,10 @@ function ProductsBody() {
     <div className='products_body_container'>
 
             <Grid container spacing={{ xs: 2, md: 2 }} sx={{width:'100% !important'}}>
-                {Array.from(Array(20)).map((_, index) => (
+                {Array.from(Array(21)).map((_, index) => (
                 <Grid item xs={6} sm={6} md={4} lg={3} key={index}>
                     <Grid item className='products_body_element' >
+                        <Link to=''>
                         <Paper
                         elevation={0}
                         className='products_body_paper'
@@ -22,7 +23,8 @@ function ProductsBody() {
                             backgroundImage: `url("${imageUrl}")`,
                         }}>
                         </Paper>
-                        <Typography id='products_text' className='products_body_element_title' variant='h5'> Hello </Typography>
+                        </Link>
+                        <Typography id='products_text' className='products_body_element_title' variant='h5'> <Link id='category_link' to=''> Hello </Link> </Typography>
                         <Typography id='products_text' className='products_body_element_category' variant=''> <Link to='' id='category_link'> This is a category </Link></Typography>
                         <div className='products_body_element_price_div'>
                             <Typography id='products_text' variant='h5' className='products_body_element_price'>
