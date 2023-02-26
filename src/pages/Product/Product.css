@@ -1,0 +1,18 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+.product_right_grid{
+    display: flex;
+    justify-content: center;
+}
+
+.product_right_grid_div{
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+}
+
+.product_cart_button{
+    color: white;
+    height: 50px;
+    border-radius: 0px;
+    margin-top: 15px;
+}

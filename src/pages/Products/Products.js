@@ -9,7 +9,7 @@ const Products = () => {
   return (
     <>
       <Navbar/>
-      <AnnouncementLine text='FREE SHIPPING ON ORDERS OVER 25€! '/>
+      <AnnouncementLine text='FREE SHIPPING ON ORDERS OVER 25€!'/>
       <ProductsFilter/>
       <ProductsBody/>
       <Footer/>
