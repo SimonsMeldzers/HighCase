@@ -8,6 +8,7 @@ import Banner from '../../components/Banner/Banner';
 import TrendingItems from '../../components/TrendingItems/TrendingItems';
 import ExploreCategories from '../../components/ExploreCategories/ExploreCategories';
 import InfoSection from '../../components/InfoSection/InfoSection';
+import AnnouncementLine from '../../components/AnnouncementLine/AnnouncementLine';
 
 const Home = () => {
    
@@ -15,6 +16,7 @@ const Home = () => {
     <>
     <Navbar/>
     <Banner/>
+    <AnnouncementLine text='FREE SHIPPING ON ORDERS OVER 25€!'/>
     <TrendingItems/>
     <ExploreCategories/>
     <InfoSection/>

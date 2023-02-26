@@ -83,7 +83,7 @@ const Navbar = () => {
               >
                 {pages.map((page) => (
                   <MenuItem key={page.pageName} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page.pageName}</Typography>
+                    <Typography textAlign="center"><Link to={page.link} style={{color:'inherit', decoration:'none', textDecoration:'none'}}>{page.pageName}</Link></Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -91,7 +91,6 @@ const Navbar = () => {
             <Typography
               variant="h5"
               noWrap
-              component="a"
               className='navbar_title'
               sx={{
                 mr: 2,
@@ -103,7 +102,7 @@ const Navbar = () => {
                 textDecoration: 'none',
               }}
             >
-              High Case
+              <Link to='/' className='navbar_title_link' style={{textDecoration:'none', color: 'white'}}>High Case</Link>
             </Typography>
             {/* Menu for desktop */}
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -119,11 +118,10 @@ const Navbar = () => {
                 </Link>
               ))}
             </Box>
-
+            
             <Typography
               variant="h6"
               noWrap
-              component="a"
               className='navbar_title'
               sx={{
                 
@@ -136,10 +134,9 @@ const Navbar = () => {
                 flexGrow: 1.5,
               }}
             >
-              High Case
+            <Link to='/' className='navbar_title_link' style={{textDecoration:'none', color: 'white'}}>High Case</Link>
             </Typography>
-            
-  
+
             <Box sx={{ flexGrow: 0 }}>
                 <IconButton sx={{ p: 0, mr: 1 }}>
                   <SearchIcon sx={{color:'white'}}/>
